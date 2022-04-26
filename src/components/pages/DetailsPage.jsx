@@ -42,7 +42,7 @@ function DetailsPage() {
                 height="100%"
                 loading="lazy"
                 style={{
-                    minHeight: "calc(85vh + 20px)"
+                    minHeight: "85vh",
                 }}
             />
 

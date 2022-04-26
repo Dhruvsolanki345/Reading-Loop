@@ -21,7 +21,7 @@ function Header() {
 
   const profileOptionsRef = useRef();
 
-  const [mobileNav, setMobileNav] = useState(true);
+  const [mobileNav, setMobileNav] = useState(false);
   const [mobileNavActive, setMobileNavActive] = useState(false);
   const [showProfileOptions, setShowProfileOptions] = useState(false);
 
@@ -37,6 +37,7 @@ function Header() {
 
   useEffect(() => {
     window.addEventListener("load", () => {
+      console.log({width: window.innerWidth})
       if (window.innerWidth <= 992) {
         setMobileNav(true);
       } else {
@@ -82,9 +83,9 @@ function Header() {
           navigate("/");
         }}
       >
-        <h1 style={{ cursor: "pointer", fontWeight: "bold", color: "purple" }}>
-          Reading <span style={{ fontSize: "calc(0.7rem + 1.5vw)" }}>Loop</span>
-        </h1>
+        <h4 style={{ cursor: "pointer", fontWeight: "bold", color: "purple" }}>
+          Reading <span style={{ fontSize: "calc(0.7rem + 1.4vw)" }}>Loop</span>
+        </h4>
       </div>
 
       <div

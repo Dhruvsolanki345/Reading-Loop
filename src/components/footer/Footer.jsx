@@ -1,19 +1,30 @@
 import "./Footer.css";
 import LogoImg from "../../assets/logo.webp";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Footer() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   return (
-    <div className="footer" id="footer">
+    <div
+      className="footer"
+      style={{ position: location.pathname.length > 10 ? "static":"fixed" }}
+      id="footer"
+    >
       <div className="footer-bottom">
-        <h1
+        {/* <h1
           onClick={() => navigate("/")}
           style={{ cursor: "pointer", fontWeight: "bold", color: "gold" }}
         >
           Reading <span style={{ fontSize: "calc(0.7rem + 1.5vw)" }}>Loop</span>
-        </h1>
+        </h1> */}
+        <h4
+          onClick={() => navigate("/")}
+          style={{ cursor: "pointer", fontWeight: "bold", color: "gold" }}
+        >
+          Reading <span style={{ fontSize: "calc(0.7rem + 1.4vw)" }}>Loop</span>
+        </h4>
 
         <div
           style={{

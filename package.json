@@ -1,8 +1,9 @@
 {
-  "name": "gyan-sangrah",
+  "name": "reading-loop",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
