@@ -118,7 +118,7 @@ function ForgotPasswordForm({
                                     Enter your email address associated with your <span style={{
                                         color: "var(--activeColor)",
                                         fontWeight: 700
-                                    }}>Merito</span> account,
+                                    }}>Google</span> account,
                                     we will send a password reset link to your email.
                                 </div>
 
