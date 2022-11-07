@@ -46,7 +46,7 @@ function HomePage() {
       <div
         className="row row-padding"
         style={{
-          paddingBottom: 40,
+          paddingBottom: 120,
         }}
       >
         <div className="col-xl-10 col-md-12">
