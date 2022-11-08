@@ -68,7 +68,12 @@ function AddBookPage() {
         "warning",
         "wrong_file_type_field_error"
       );
-    } else if (file) {
+
+      evt.target.value = null;
+      return;
+    } 
+    
+    if (file) {
       setInputFile(file);
     }
   };
