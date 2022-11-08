@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/core": "^7.20.2",
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.2.0",
