@@ -1,0 +1,7 @@
+,email,password,result
+0,,Kk4GLcjLT5mUbdX,Email field is required.
+1,rajas.bondale,Kk4GLcjLT5mUbdX,Email address is invalid.
+2,12312212,Kk4GLcjLT5mUbdX,Email address is invalid.
+3,rajas.bondale@somaiya.edu,,Password field is required.
+4,,,Email field is required.
+5,rajas.bondale@somaiya.edu,Kk4GLcjLT5mUbdX,Firebase: The password is invalid or the user does not have a password. (auth/wrong-password).

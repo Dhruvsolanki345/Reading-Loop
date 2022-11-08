@@ -1,0 +1,12 @@
+,name,email,phone,password,agreeTerms,result
+0,,rajas@gmail.com,9969342104,password,True,Full name field is required.
+1,Rajas,rajas@gmail.com,9969342104,password,True,Firebase: The email address is already in use by another account. (auth/email-already-in-use).
+2,,,,,True,Full name field is required.
+3,Rajas,,9969342104,password,True,Email field is required.
+4,Rajas,rajas,9969342104,password,True,Email address is invalid.
+5,Rajas,rajas@gmail.com,,password,True,Phone field is required.
+6,Rajas,rajas@gmail.com,abcdefgh,password,True,Phone number is invalid. Phone number must be at least 10 digits.
+7,Rajas,rajas@gmail.com,996934210,password,True,Phone number is invalid. Phone number must be at least 10 digits.
+8,Rajas,rajas@gmail.com,9969342104,,True,Password field is required.
+9,Rajas,rajas@gmail.com,9969342104,pass,True,Password length must be at least 8 characters.
+10,Rajas,rajas@gmail.com,9969342104,password,False,You must agree to our Privacy Policy and Terms of Use before creating an account.
