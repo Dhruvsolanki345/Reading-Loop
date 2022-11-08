@@ -12,7 +12,7 @@ options = Options()
 options.binary_location = "C:/Program Files/Mozilla Firefox/firefox.exe"
 
 driver = webdriver.Firefox(service=ser, options=options)
-print("Registration test case started")  
+print("Login test cases started")  
 driver.get("https://reading-loop-528f8.web.app/login")
 driver.maximize_window()  
 time.sleep(2)
@@ -40,4 +40,4 @@ for i in signups:
 print(signups)
 time.sleep(2)
 driver.close()  
-print("sample test case successfully completed")  
+print("Sample test cases successfully completed")  
