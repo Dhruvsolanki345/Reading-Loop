@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 import os
 from pprint import pprint
+import pandas as pd
 
 base = os.getcwd()
 driver = webdriver.Chrome()
@@ -69,6 +70,8 @@ for test_case in test_cases:
     time.sleep(1)
 
 pprint(test_cases)
+df = pd.DataFrame.from_dict(test_cases)
+df.to_csv("admin.csv")
 
 time.sleep(2)
 driver.close()

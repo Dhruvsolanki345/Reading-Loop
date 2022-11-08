@@ -1,0 +1,6 @@
+,title,file_present,author,result,file_url
+0,,False,,Title is required.,
+1,Book 1,False,,File is required.,
+2,Book 1,True,,Author is required.,C:\dhruv\dhruv_project\readingLoop\testing\dummy.pdf
+3,Book 1,True,,Only pdf file are allowed,C:\dhruv\dhruv_project\readingLoop\testing\dummy.jpg
+4,Book 1,True,Dhruv,Author is required.,C:\dhruv\dhruv_project\readingLoop\testing\dummy.pdf
