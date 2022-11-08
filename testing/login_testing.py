@@ -16,13 +16,28 @@ print("Registration test case started")
 driver.get("https://reading-loop-528f8.web.app/login")
 driver.maximize_window()  
 time.sleep(2)
-signups = [{"email": "rajas.bondale@somaiya.edu", "password": "Kk4GLcjLT5mUbdX"}]
-for i in signups:
-    driver.find_element("name", "email").send_keys(i["email"])
-    driver.find_element("name", "password").send_keys(i["password"])
+signups = [{"email": "", "password": "Kk4GLcjLT5mUbdX" , "result": ""},
+            {"email": "rajas.bondale", "password": "Kk4GLcjLT5mUbdX" , "result": ""},
+            {"email": "12312212", "password": "Kk4GLcjLT5mUbdX" , "result": ""},
+            {"email": "rajas.bondale@somaiya.edu", "password": "" , "result": ""},
+            {"email": "", "password": "" , "result": ""},
+            ]
+email = driver.find_element("name", "email")
+email.send_keys("email")
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-time.sleep(2)
+password = driver.find_element("name", "password")
 myele = driver.find_element("xpath", "//button[@class='rounded-filled-btn'][contains(., 'Login')]")
-# myele.click()
+for i in signups:
+    email.clear()
+    password.clear()
+    email.send_keys(i["email"])
+    password.send_keys(i["password"])
+    myele.click()
+    time.sleep(2)
+    i["result"] = driver.find_element("id", "notistack-snackbar").text
+    driver.find_element("css selector", ".SnackbarItem-action").find_element("tag name", "button").click()
+    time.sleep(1)
+print(signups)
+time.sleep(2)
 driver.close()  
 print("sample test case successfully completed")  
