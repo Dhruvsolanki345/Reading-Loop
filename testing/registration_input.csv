@@ -1,0 +1,12 @@
+name,email,phone,password,agreeTerms,result
+,rajas@gmail.com,9969342104,password,True,
+Rajas,rajas@gmail.com,9969342104,password,True,
+,,,,True,
+Rajas,,9969342104,password,True,
+Rajas,rajas,9969342104,password,True,
+Rajas,rajas@gmail.com,,password,True,
+Rajas,rajas@gmail.com,abcdefgh,password,True,
+Rajas,rajas@gmail.com,996934210,password,True,
+Rajas,rajas@gmail.com,9969342104,,True,
+Rajas,rajas@gmail.com,9969342104,pass,True,
+Rajas,rajas@gmail.com,9969342104,password,False,
