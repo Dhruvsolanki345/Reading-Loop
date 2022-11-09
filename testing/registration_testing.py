@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 import pandas as pd
+from csv import DictReader
 
 # driver = webdriver.Chrome("C:/Users/Rajas/chromedriver_win32/chromedriver.exe")
 ser = Service("C:/Users/Rajas/geckodriver_win32/geckodriver.exe")
@@ -24,19 +25,23 @@ time.sleep(2)
 myele = driver.find_element("xpath", "//span[contains(.,'Signup Now')]")
 myele.click()
 time.sleep(1)
-signups = [{"name": "",       "email": "rajas@gmail.com", "phone": "9969342104",   "password": "password", "agreeTerms": True, "result": ""},
-            {"name": "Rajas", "email": "rajas@gmail.com", "phone": "9969342104",   "password": "password", "agreeTerms": True, "result": ""},
-            {"name": "",       "email": ""              ,"phone": "",              "password": "",         "agreeTerms": True, "result": ""},
-            {"name": "Rajas", "email": "",                "phone": "9969342104",   "password": "password", "agreeTerms": True, "result": ""},
-            {"name": "Rajas", "email": "rajas",           "phone": "9969342104",   "password": "password", "agreeTerms": True, "result": ""},
-            {"name": "Rajas", "email": "rajas@gmail.com", "phone": "",             "password": "password", "agreeTerms": True, "result": ""},
-            {"name": "Rajas", "email": "rajas@gmail.com", "phone": "abcdefgh",     "password": "password", "agreeTerms": True, "result": ""},
-            {"name": "Rajas", "email": "rajas@gmail.com", "phone": "996934210",    "password": "password", "agreeTerms": True, "result": ""},
-            # {"name": "Rajas", "email": "rajas@gmail.com", "phone": "996934210412", "password": "password", "agreeTerms": True, "result": ""},
-            {"name": "Rajas", "email": "rajas@gmail.com", "phone": "9969342104",   "password": "",         "agreeTerms": True, "result": ""},
-            {"name": "Rajas", "email": "rajas@gmail.com", "phone": "9969342104",   "password": "pass",     "agreeTerms": True, "result": ""},
-            {"name": "Rajas", "email": "rajas@gmail.com", "phone": "9969342104",   "password": "password", "agreeTerms": False, "result": ""},
-            ]
+with open("registration_input.csv", 'r') as f:
+    dict_reader = DictReader(f)
+    signups = list(dict_reader)
+
+# signups = [{"name": "",       "email": "rajas@gmail.com", "phone": "9969342104",   "password": "password", "agreeTerms": True, "result": ""},
+#             {"name": "Rajas", "email": "rajas@gmail.com", "phone": "9969342104",   "password": "password", "agreeTerms": True, "result": ""},
+#             {"name": "",       "email": ""              ,"phone": "",              "password": "",         "agreeTerms": True, "result": ""},
+#             {"name": "Rajas", "email": "",                "phone": "9969342104",   "password": "password", "agreeTerms": True, "result": ""},
+#             {"name": "Rajas", "email": "rajas",           "phone": "9969342104",   "password": "password", "agreeTerms": True, "result": ""},
+#             {"name": "Rajas", "email": "rajas@gmail.com", "phone": "",             "password": "password", "agreeTerms": True, "result": ""},
+#             {"name": "Rajas", "email": "rajas@gmail.com", "phone": "abcdefgh",     "password": "password", "agreeTerms": True, "result": ""},
+#             {"name": "Rajas", "email": "rajas@gmail.com", "phone": "996934210",    "password": "password", "agreeTerms": True, "result": ""},
+#             # {"name": "Rajas", "email": "rajas@gmail.com", "phone": "996934210412", "password": "password", "agreeTerms": True, "result": ""},
+#             {"name": "Rajas", "email": "rajas@gmail.com", "phone": "9969342104",   "password": "",         "agreeTerms": True, "result": ""},
+#             {"name": "Rajas", "email": "rajas@gmail.com", "phone": "9969342104",   "password": "pass",     "agreeTerms": True, "result": ""},
+#             {"name": "Rajas", "email": "rajas@gmail.com", "phone": "9969342104",   "password": "password", "agreeTerms": False, "result": ""},
+#             ]
 name = driver.find_element("name", "name")
 email = driver.find_element("name", "email")
 phone = driver.find_element("name", "phone")
